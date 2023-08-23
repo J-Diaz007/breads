@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function NotFound ()  {
+function notFound ()  {
     return (
         <Default>
         <h2>404 Not Found</h2>
@@ -9,4 +9,4 @@ function NotFound ()  {
     )
 }
 
-module.exports = NotFound
+module.exports = notFound
