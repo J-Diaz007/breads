@@ -3,11 +3,16 @@ const express = require('express')
 
 const methodOverride = require('method-override')
 
+//Requires mongoose so we can use it throughout our entire app
+const mongoose = require('mongoose')
 
 // Configuration
 require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => { console.log('connected to mongo: ', process.env.MONGO_URI) })
 
 // Middleware
 app.use(methodOverride('_method'))
